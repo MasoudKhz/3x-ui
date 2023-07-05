@@ -109,6 +109,7 @@ install_x-ui() {
 
     if [ $# == 0 ]; then
         last_version=$(curl -Ls "https://api.github.com/repos/MHSanaei/3x-ui/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
+        echo -e "1111111111111111111111111111111111111111111111111111111"
         echo -e ${last_version}
         if [[ ! -n "$last_version" ]]; then
             echo -e "${red}Failed to fetch x-ui version, it maybe due to Github API restrictions, please try it later${plain}"
